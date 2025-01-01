@@ -242,12 +242,16 @@
         });
         callback({ id });
       } catch (err) {
+        console.log(err);
         errback(err);
       }
     });
 
     producerTransport.on('connectionstatechange', (state) => {
+      console.log(state);
       switch (state) {
+        
+        
         case 'connecting':
           console.log('publishing...');
           break;
