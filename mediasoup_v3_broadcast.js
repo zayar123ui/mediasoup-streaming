@@ -97,7 +97,7 @@ function isFileExist(path) {
 // --- socket.io server ---
 const io = require("socket.io")(webServer, {
   cors: {
-    origin: "*",
+    origin: "https://rtc.techlinkmyanmar.com",
     methods: ["GET", "POST"],
   },
 });

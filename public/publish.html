@@ -247,30 +247,30 @@
       }
     });
 
-    producerTransport.on('connectionstatechange', (state) => {
-      console.log(state);
-      switch (state) {
+    // producerTransport.on('connectionstatechange', (state) => {
+    //   console.log(state);
+    //   switch (state) {
         
         
-        case 'connecting':
-          console.log('publishing...');
-          break;
+    //     case 'connecting':
+    //       console.log('publishing...');
+    //       break;
 
-        case 'connected':
-          console.log(state);
+    //     case 'connected':
+    //       console.log(state);
           
-          console.log('published');
-          break;
+    //       console.log('published');
+    //       break;
 
-        case 'failed':
-          console.log('failed');
-          producerTransport.close();
-          break;
+    //     case 'failed':
+    //       console.log('failed');
+    //       producerTransport.close();
+    //       break;
 
-        default:
-          break;
-      }
-    });
+    //     default:
+    //       break;
+    //   }
+    // });
 
     const useVideo = checkUseVideo();
     const useAudio = checkUseAudio();
